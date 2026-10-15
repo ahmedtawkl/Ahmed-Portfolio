@@ -3,13 +3,13 @@
 ========================= */
 
 :root {
-    --primary: #00abf0;
-    --secondary: #0077ff;
-    --bg: #081b29;
-    --bg-secondary: #112e42;
-    --text: #ededed;
-    --text-light: #b8c4ce;
-    --card: #0d2638;
+    --primary: #D87959;
+    --secondary: #B94D3A;
+    --bg: #17110F;
+    --bg-secondary: #2A1D19;
+    --text: #F5EEE6;
+    --text-light: #CDBBAA;
+    --card: #241815;
     --transition: 0.3s ease;
 }
 
@@ -19,11 +19,11 @@
 ========================= */
 
 body.light-mode {
-    --bg: #f5f7fa;
-    --bg-secondary: #ffffff;
-    --text: #17202a;
-    --text-light: #555;
-    --card: #ffffff;
+    --bg: #F5EEE6;
+    --bg-secondary: #FFF8F0;
+    --text: #2A1C17;
+    --text-light: #756257;
+    --card: #FFF8F0;
 }
 
 
@@ -80,7 +80,7 @@ section {
     justify-content: space-between;
     align-items: center;
 
-    background: rgba(8, 27, 41, 0.9);
+    background: rgba(23, 17, 15, 0.92);
 
     backdrop-filter: blur(10px);
 
@@ -228,7 +228,7 @@ section {
 
     background: var(--primary);
 
-    color: #081b29;
+    color: #17110F;
 
     border-radius: 4rem;
 
@@ -596,7 +596,7 @@ section {
 
     height: 0.7rem;
 
-    background: #1d3c50;
+    background: #4B3027;
 
     border-radius: 1rem;
 
@@ -996,7 +996,7 @@ section {
 footer {
     padding: 2.5rem 9%;
 
-    background: #06141f;
+    background: #120D0B;
 
     display: flex;
 
@@ -1151,3 +1151,103 @@ footer p {
         text-align: center;
     }
 }
+
+/* =========================
+   PORTFOLIO POLISH
+========================= */
+:root {
+    --primary: #D87959;
+    --secondary: #D87959;
+    --bg: #17110F;
+    --bg-secondary: #2A1D19;
+    --card: #35231D;
+    --text-light: #CDBBAA;
+}
+.header {
+    border-bottom: 1px solid rgba(104, 197, 239, .12);
+    background: rgba(7, 21, 34, .86);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .12);
+}
+body.light-mode .header { background: rgba(255,255,255,.9); }
+.navbar a { position: relative; padding: .8rem 0; }
+.navbar a::after {
+    content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px; transition: width .25s ease;
+}
+.navbar a:hover::after, .navbar a.active::after { width: 100%; }
+.header-icons button { width: 4rem; height: 4rem; border-radius: 50%; }
+.header-icons button:hover { background: rgba(54,197,240,.12); }
+section { scroll-margin-top: 8rem; }
+.home { position: relative; isolation: isolate; }
+.home::before {
+    content: ""; position: absolute; z-index: -1; width: 38rem; height: 38rem;
+    right: 8%; top: 22%; border-radius: 50%;
+    background: radial-gradient(circle, rgba(54,197,240,.12), transparent 68%);
+    pointer-events: none;
+}
+.profile-image { border: 3px solid rgba(216,121,89,.85); box-shadow: 0 0 0 1.2rem rgba(216,121,89,.07), 0 0 5rem rgba(216,121,89,.24); }
+.section-title h2 span, .logo span, .home h1 span, .home h2 span {
+    background: linear-gradient(100deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.project-card { box-shadow: 0 1.2rem 3rem rgba(0,0,0,.12); }
+.project-image { height: 21rem; overflow: hidden; position: relative; background: #211714; }
+.project-image img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .55s ease; }
+.project-card:hover .project-image img { transform: scale(1.045); }
+.project-content { display: flex; flex-direction: column; align-items: flex-start; height: calc(100% - 21rem); }
+.project-content p { flex-grow: 1; }
+.btn-small { display: inline-flex; align-items: center; justify-content: center; gap: .7rem; border: 1px solid rgba(54,197,240,.2); transition: var(--transition); }
+.btn-small:hover { color: var(--primary); border-color: var(--primary); transform: translateY(-2px); }
+.btn-small.live { background: linear-gradient(110deg, var(--primary), #E7B68A); color: #17110F; }
+.btn-small.live:hover { color: #17110F; filter: brightness(1.08); }
+::selection { background: var(--primary); color: #17110F; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+@media (max-width: 850px) {
+    .navbar { border-top: 1px solid rgba(216,121,89,.18); box-shadow: 0 2rem 3rem rgba(0,0,0,.18); }
+    .navbar a { width: fit-content; }
+    .navbar a::after { bottom: -.2rem; }
+    .home::before { right: 10%; top: 10%; width: 28rem; height: 28rem; }
+}
+@media (max-width: 600px) {
+    .project-image { height: 19rem; }
+    .project-content { height: auto; }
+    .project-links { flex-wrap: wrap; }
+    .header-icons { gap: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+
+/* =========================
+   WARM PORTRAIT-MATCHED THEME
+   Palette inspired by the portrait's brick-red wall, warm lighting and cream shirt.
+========================= */
+:root {
+    --primary: #D87959;
+    --secondary: #B94D3A;
+    --bg: #17110F;
+    --bg-secondary: #2A1D19;
+    --text: #F5EEE6;
+    --text-light: #CDBBAA;
+    --card: #241815;
+}
+body {
+    background-image: radial-gradient(ellipse at 78% 12%, rgba(185, 77, 58, 0.13), transparent 34%),
+                      radial-gradient(ellipse at 8% 70%, rgba(216, 121, 89, 0.07), transparent 32%);
+    background-attachment: fixed;
+}
+.header { background: rgba(23, 17, 15, 0.92); }
+body.light-mode {
+    --bg: #F5EEE6;
+    --bg-secondary: #FFF8F0;
+    --text: #2A1C17;
+    --text-light: #756257;
+    --card: #FFF8F0;
+}
+body.light-mode {
+    background-image: radial-gradient(ellipse at 78% 12%, rgba(185, 77, 58, 0.09), transparent 34%),
+                      radial-gradient(ellipse at 8% 70%, rgba(216, 121, 89, 0.06), transparent 32%);
+}
+body.light-mode .header { background: rgba(255, 248, 240, 0.92); }
